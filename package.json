@@ -1,0 +1,55 @@
+{
+  "name": "multi-level-cache",
+  "version": "1.0.0",
+  "description": "Multi-level caching that can share cache between instances.",
+  "public": true,
+  "main": "dist/index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint-fix": "balena-lint --fix src typings tests",
+    "lint": "balena-lint src typings tests",
+    "build": "npm run clean && tsc",
+    "clean": "rimraf dist/",
+    "prepublish": "npm run build"
+  },
+  "author": "Balena.io Ltd <hello@balena.io> (https://balena.io)",
+  "license": "Apache-2.0",
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/balena-io-modules/multi-level-cache",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/balena-io-modules/multi-level-cache.git"
+  },
+  "bugs": {
+    "url": "https://github.com/balena-io-modules/multi-level-cache/issues"
+  },
+  "devDependencies": {
+    "@balena/lint": "^6.2.0",
+    "@types/cache-manager": "^3.4.3",
+    "@types/cache-manager-ioredis": "^2.0.2",
+    "@types/lodash": "^4.14.179",
+    "@types/memoizee": "^0.4.7",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "@balena/pinejs": "^14.39.1",
+    "cache-manager": "^3.6.0",
+    "cache-manager-ioredis": "^2.1.0",
+    "lodash": "^4.17.21",
+    "memoizee": "^0.4.15"
+  },
+  "engines": {
+    "node": "^16.13.0",
+    "npm": "^8.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
