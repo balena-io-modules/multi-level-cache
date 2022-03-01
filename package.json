@@ -1,6 +1,6 @@
 {
   "name": "multi-level-cache",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "Multi-level caching that can share cache between instances.",
   "public": true,
   "main": "dist/index",
@@ -51,5 +51,8 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "versionist": {
+    "publishedAt": "2022-03-01T20:58:39.819Z"
   }
 }
