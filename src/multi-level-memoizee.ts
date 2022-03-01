@@ -2,8 +2,9 @@ import type { types } from '@balena/pinejs';
 import * as _ from 'lodash';
 import type { Options as MemoizeeOptions } from 'memoizee';
 import primitiveKey = require('memoizee/normalizers/primitive');
-import { SECONDS } from './config';
 import { createMultiLevelStore, Defined, MultiStoreOpt } from '.';
+
+const SECONDS = 1000;
 
 type MultiCacheMemoizeeOpts<T extends (...args: any[]) => any> = {
 	cacheKey?: string;
